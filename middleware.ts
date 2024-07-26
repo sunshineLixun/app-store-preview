@@ -4,11 +4,13 @@ import { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
+  console.log('pathname', pathname);
+  
   const isExit = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
-
+  console.log('isExit', request.nextUrl);
+  
   if (isExit) return;
 
   request.nextUrl.pathname = `/`;
