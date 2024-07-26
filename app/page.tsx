@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 import HomeIndex from "@/components/home/HomeIndex";
 
 export default async function Home({
@@ -5,5 +7,11 @@ export default async function Home({
 }: {
   params: { lang: string };
 }) {
-  return <HomeIndex lang={lang} />;
+  return (
+    <>    
+      <Header />
+      <HomeIndex lang={lang} />
+      <Footer />  
+    </>
+  )
 }

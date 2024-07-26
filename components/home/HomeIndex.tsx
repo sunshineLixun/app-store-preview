@@ -14,7 +14,7 @@ export default async function HomeIndex({ lang }: { lang: string }) {
   const dict = await getDictionary(langName);
 
   return (
-    <>
+    <div className="flex flex-col items-center py-6">
       {/* Hero Section */}
       <Hero locale={dict.Hero} CTALocale={dict.CTAButton} />
       <SocialProof locale={dict.SocialProof} />
@@ -38,7 +38,7 @@ export default async function HomeIndex({ lang }: { lang: string }) {
 
       {/* CTA (Call to Action) */}
       <CTA locale={dict.CTA} CTALocale={dict.CTAButton} />
-    </>
+    </div>
   );
 }
 
